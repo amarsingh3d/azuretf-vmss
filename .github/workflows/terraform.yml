@@ -1,13 +1,11 @@
 name: 'Terraform Azure Deployment'
 
 on:
-  push:
-    branches:
-      - dev
-  pull_request:
-    branches:
-      - dev
-
+  workflow_run:
+    workflows: ['tfsec'] 
+    types:
+      - success
+  
 env:
   TF_VERSION: '1.7.5'  # specify the Terraform version
   AZURERM_PROVIDER_VERSION: '3.114.0'  # specify the AzureRM provider version
