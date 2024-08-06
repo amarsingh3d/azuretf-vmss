@@ -50,7 +50,7 @@ jobs:
 
     - name: Terraform Plan
       run: |
-        export TF_VAR_gitpass=${{ secrets.TF_VAR_GITPASS }} 
+        export TF_VAR_gitpass=${{ secrets.GIT_PASS }} 
         terraform plan -out=tfplan
       env:
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
