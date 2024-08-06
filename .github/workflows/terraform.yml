@@ -2,7 +2,7 @@ name: 'Terraform Azure Deployment'
 
 on:
   workflow_run:
-    workflows: ['tfsec'] 
+    workflows: ["tfsec"] 
     types:
       - success
   
